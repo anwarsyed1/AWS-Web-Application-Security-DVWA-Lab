@@ -1,16 +1,22 @@
 <h1>AWS Web Application Security on DVWA (Damn Vulnerable Web Application)</h1>
 
 <img src="https://imgur.com/omzPnOv.png" height="80%" width="80%" alt="diagram"/>
+<b>
+Damn Vulnerable Web App (DVWA) is a PHP/MySQL web application that is damn vulnerable.
+Its main goals are to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and aid teachers/students to teach/learn web application security in a class room environment.
+</b>
 <img src="https://imgur.com/Qmdmzyu.png" height="80%" width="80%" alt="diagram"/>
 
 <h2>Description</h2>
-In this project, I setup an EC2 Instance on AWS with an HTTP server running on port 80. We then use docker to dock the server on a Kali Linux terminal to host the sever. Lastly we use DVWA to test vulnerabilities This is a step by step guide so feel free to follow along! 
+In this project, I setup an EC2 Instance on AWS with an HTTP server running on port 80. We then use docker to dock the server on a Kali Linux terminal to host the sever. Lastly we use DVWA to test vulnerabilities via Command Execution. This is a step by step guide so feel free to follow along! 
 <br />
 
 
 <h2>Languages and Utilities Used</h2>
 
 - <b>Bash</b> 
+- <b>PHP</b> 
+- <b>MySQL</b>
 
 <h2>Environments Used </h2>
 
@@ -52,31 +58,25 @@ Now we will click on DVWA Security and make the vulnerability level to low, and 
 <img src="https://imgur.com/K3Su883.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Then created another if statement to verify if the firstname and lastname match with the corresponding sin. If successfull return status 200 (OK) with the mediacal record and a JSON message, else return an error JSON message with status 401 (unauthorized):  <br/>
-<img src="https://imgur.com/bGWNHPr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Below we are going to do a simple ping test using the web interface. So in our case the local host:  <br/>
+<img src="https://imgur.com/oBTzs2Z" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-:  <br/>
-<img src="https://imgur.com/INiv9Ii.png" height="80%" width="80%" alt="Cyber Attack Event Management"/>
+Now I use the "cat /etc/password" command. Notice that either a messaging saying illegal IP address was displayed or nothing was returned:  <br/>
+<img src="https://imgur.com/fKlJwXM.png" height="80%" width="80%" alt="Cyber Attack Event Management"/>
 <br />
 <br />
-For the next function, We will use the POST method to create a new patient we want to be able to assert a new patient from the header to the database. So if the patients sin match equals the firstname, lastname, and phone. then add the patient to the database with a status 200 (OK):  
+Now I use the IP address with "cat /etc/password". Notice that we are now able to see the contents of the /etc/passwd file.:  
 <br/>
-<img src="https://imgur.com/W5alK8v.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/2toazKh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
-Next create a funtion for updating a patients phone number, we need to verify the sin, verify if the first and last name match the sin, then we can use the PUT method to update the phone number and return the updated database in the body:  <br/>
-<img src="https://imgur.com/TkkHxBu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Lastly we will create a funtion to delete patients and medical records, again we need to verify if the patients sin exists in the database, verify if the sin matches with the first and last name, then we are able to delete the patient or records from our database using the DELETE Method. Else return error code with JSON message indicating the credentials don't match the sin on file:  <br/>
-<img src="https://imgur.com/vXCpzaR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
+Using the "IP address; cat /etc/passwd | tee /tmp/passwd" we are not only displaying the contents of /etc/passwd on the webpage, but also we are copying the /etc/passwd file to the /tmp directory:  <br/>
+<img src="https://imgur.com/U2PMemG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <br />
-This Concludes This REST API for a Medical Clinic Project!
-NOTE: You can build on this and add more security layers and conditions as it would be in real life!  <br/>
+This Concludes This AWS Web Application Security on DVWA Project!
+NOTE: You can go through the DVWA web application and test more vulnerabilities to gain new experiences!  <br/>
 <br />
 </p>
 
