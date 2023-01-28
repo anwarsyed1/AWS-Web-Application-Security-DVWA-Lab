@@ -59,7 +59,7 @@ Now we will click on DVWA Security and make the vulnerability level to low, and 
 <br />
 <br />
 Below we are going to do a simple ping test using the web interface. So in our case the local host:  <br/>
-<img src="https://imgur.com/oBTzs2Z" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/jZQpAzN" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Now I use the "cat /etc/password" command. Notice that either a messaging saying illegal IP address was displayed or nothing was returned:  <br/>
